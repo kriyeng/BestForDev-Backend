@@ -20,3 +20,6 @@ README.old.md
 
 # Nohup logs.
 nohup.out
+
+# Npm lock file
+package-lock.json
