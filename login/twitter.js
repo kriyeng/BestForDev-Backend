@@ -1,13 +1,11 @@
 'use strict'
 const twitterAPI = require('node-twitter-api')
 
-const secrets = require('./secrets')
-const { consumerKey, consumerSecret, callbackURL } = secrets
-
+const { KEY, SECRET } = process.env
 const twitter = new twitterAPI({
-    consumerKey: consumerKey,
-    consumerSecret: consumerSecret,
-    callback: callbackURL,
+    consumerKey: KEY,
+    consumerSecret: SECRET,
+    callback: 'http://localhost:3000/access-token',
 })
 
 module.exports = function(app) {

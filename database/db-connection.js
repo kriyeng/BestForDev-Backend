@@ -1,11 +1,10 @@
 'use strict'
-
-const { consumerKey, consumerSecret, callbackURL, databaseURL } = secrets
+const { DATABASE_URL } = process.env
 
 const db = require('knex')({
     client: 'pg',
     connection: {
-        connectionString: databaseURL,
+        connectionString: DATABASE_URL,
         ssl: true,
     },
 })

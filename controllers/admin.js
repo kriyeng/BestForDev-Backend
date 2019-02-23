@@ -1,6 +1,5 @@
 'use strict'
 const db = require('../database/db-connection')
-const config = require('./secrets')
 
 module.exports = function(admin_app) {
     admin_app.get('/', getAdminRoot)
